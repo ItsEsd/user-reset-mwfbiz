@@ -72,7 +72,7 @@
 document.getElementById("verClick1").addEventListener("click", verifyEmail);
 function verifyEmail() {
     var ur1 ="https://script.google.com/macros/s/";
-    var ur2="AKfycbxvBawTU7ggkrT-akgPHHlm1nmlacuKSTiSUFAwbL6jPVdojuP5xWwYv3ANwowk-UUh2g"
+    var ur2="AKfycbwTNMDdj79fge-iEhYQFL7iENgSiz_gH1D53WSVbXQ7C3FqlYV1qTTeJBQw0WA3bnj-tw"
     var ursc = ur1+ur2+"/exec";
     var ml = $("#mid").val();
     if (ml != 0) {
@@ -93,7 +93,7 @@ function verifyEmail() {
     }
   }
 function ctrlqchmail(e){
-var res = e.records;
+var res = e.result;
 var ml = $("#mid").val();
 if(res =="ID found!"){
   document.getElementById("email1").value = ml;
@@ -124,36 +124,41 @@ else{
   document.getElementById('svnewpass').addEventListener('click', updatepass);
   function updatepass() {
     document.getElementById("loader3").style.visibility = "visible";
-    var script_pass = "https://script.google.com/macros/s/AKfycbwUTpwH8SSky6jlcmJ-07CLUylv3u_lHWakq1nWrEQgZn8yeK8B-Zxl0-hkg-mKdyZkDg/exec";
+    var r1 ="https://script.google.com/macros/s/";
+    var r2="AKfycbwTNMDdj79fge-iEhYQFL7iENgSiz_gH1D53WSVbXQ7C3FqlYV1qTTeJBQw0WA3bnj-tw"
+    var rs = r1+r2+"/exec";
     var newP = $('#passwordnew').val();
     var emid = $('#email1').val();
     if (emid != "info@mwfbiz.com" && newP != 0) {
-      var urlp = script_pass + "?callback=ctrlq&email1=" + emid + "&passwordnew=" + newP + "&action=mwtrdhGRGdge45trdfgg5rd4gdeyehghm";
+      var urlp = rs + "?callback=bzpupdtd&email1=" + emid + "&passwordnew=" + newP + "&action=bizpdt";
       var request = jQuery.ajax({
         crossDomain: true,
         url: urlp,
         method: "GET",
         dataType: "jsonp"
       });
-      document.getElementById("loader3").style.visibility = "hidden";
-      document.getElementById('showPass').innerHTML = '<div><h4 style="color:#dd1d16;">Passcode Changed</h4></div>';
     } else {
       document.getElementById("loader3").style.visibility = "hidden";
       document.getElementById('svnewpass').disabled = true;
       document.getElementById('showPass').innerHTML = '<p style="color:red;">Guest pass cannot be changed</p>';
     }
-    setTimeout(function() {
-      $('#showPass').fadeOut('fast');
-      window.open("https://mwfbiz.com","_self");
-    }, 10000);
   }
-
+function bzpupdtd(e){
+if(e.result=="Value updated successfully!"){
+  document.getElementById("loader3").style.visibility = "hidden";
+      document.getElementById('showPass').innerHTML = '<div><h4 style="color:#dd1d16;">&#9745;  Passcode Changed</h4></div>';
+      setTimeout(function() {
+        $('#showPass').fadeOut('fast');
+        window.open("https://mwfbiz.com","_self");
+      }, 5000);
+    }
+}
   function sendEmail() {
     var k =Math.random().toString(26).substring(2, 6) + Math.random().toString(26).substring(2, 6);
     var mailat =  document.getElementById('mid').value;
     document.getElementById('vercodepre').value = k;
       Email.send({
-          SecureToken : "e38e8c5b-1b65-4c2e-bf24-d5c0206c8cf8",
+          SecureToken : "a24b6cee-3019-4cce-a423-313583615b01",
           To: mailat,
           From: "donotreply@mwfbiz.com",
           Subject: "Email Verification",
