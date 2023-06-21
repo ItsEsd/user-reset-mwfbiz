@@ -72,7 +72,7 @@
 document.getElementById("verClick1").addEventListener("click", verifyEmail);
 function verifyEmail() {
     var ur1 ="https://script.google.com/macros/s/";
-    var ur2="AKfycbwTNMDdj79fge-iEhYQFL7iENgSiz_gH1D53WSVbXQ7C3FqlYV1qTTeJBQw0WA3bnj-tw"
+    var ur2="AKfycbxjEWkVAO6VRGrU7GnmlVQuvXzT19jY-6AJ8urPlM5mzdr2YQiNKDMH3xqc3mw3Top1eQ"
     var ursc = ur1+ur2+"/exec";
     var ml = $("#mid").val();
     if (ml != 0) {
@@ -125,7 +125,7 @@ else{
   function updatepass() {
     document.getElementById("loader3").style.visibility = "visible";
     var r1 ="https://script.google.com/macros/s/";
-    var r2="AKfycbwTNMDdj79fge-iEhYQFL7iENgSiz_gH1D53WSVbXQ7C3FqlYV1qTTeJBQw0WA3bnj-tw"
+    var r2="AKfycbxjEWkVAO6VRGrU7GnmlVQuvXzT19jY-6AJ8urPlM5mzdr2YQiNKDMH3xqc3mw3Top1eQ"
     var rs = r1+r2+"/exec";
     var newP = $('#passwordnew').val();
     var emid = $('#email1').val();
@@ -160,7 +160,7 @@ if(e.result=="Value updated successfully!"){
       Email.send({
           SecureToken : "a24b6cee-3019-4cce-a423-313583615b01",
           To: mailat,
-          From: "donotreply@mwfbiz.com",
+          From: "🌐 mwfbiz.COM <donotreply@mwfbiz.com>",
           Subject: "Email Verification",
           Body:  "<html><body style='background-color:#161616;color:white;border-radius:10px;'><div align='center' style='padding:40px;'><h2 style='color:white'>W E L C O M E</h2><h2><a target='_blank' href='https://mwfbiz.com' style='text-decoration:none;'>Mind Without Fear - M W F</a></h2>" + "<p style='color:white;'>Your Confirmation Code is: </p><h3 style='color:black;width:140px;background-color:#e6e6e6;border-radius:4px;padding:6px;'>"+ k +"</h3><br><p style='color:white;'>Contact: <a href='mailto:info@mwfbiz.com'>info@mwfbiz.com</a></p><h4 style='color:white;'>Thank You</h4><p style='font-size:12px;color:#ffd703;'>N.B. Do not reply to this email</p></div></body></html>",
       })
