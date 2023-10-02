@@ -16,7 +16,7 @@ top:0px;
 left:0px;
 width:100%;
 position: fixed;
-background-color: #b10505ad;
+background-color: #4b4b4b;
 padding-bottom:20px;
 }
 .sticky-m img{
@@ -62,7 +62,7 @@ footer a{
     left:0px;
     position:fixed;
     padding:10px;
-    background-color:#b10505ad;
+    background-color:#b10505;
     width:100%;
 }
 #footsec a{
