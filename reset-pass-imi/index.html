@@ -100,7 +100,7 @@ body{
     <div >
       <div align="center" id="verStep1-m">
         <div style="width:80%;max-width:400px;padding-top:170px;">
-          <form id="verificationStep1-m" target="hiddenframe"><img class="topImg" src="../image/lck.png"><br> <br><input type="email" autocomplete="off" id="mid-m" class="form-control" placeholder="Enter registered email address** (MONOLOGUE)" required /> <input autocomplete="off" type="submit" Value="Next >>" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" id="verClick1-m"></form>
+          <form id="verificationStep1-m" onsubmit="event.preventDefault();"><img class="topImg" src="../image/lck.png"><br> <br><input type="email" autocomplete="off" id="mid-m" class="form-control" placeholder="Enter registered email address** (MONOLOGUE)" required /> <input autocomplete="off" type="submit" Value="Next >>" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" id="verClick1-m"></form>
         </div>
         <p id="mcheck-m" style="color:red;display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:2px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> User email not found</p>
@@ -108,7 +108,7 @@ body{
       </div>
       <div align="center" id="verStep2-m">
         <div style="width:80%;max-width:400px;padding-top:170px;">
-          <form id="verificationStep2-m" target="hiddenframe"><img class="topImg" src="../image/lck.png"><br><br><input id="dobday" list="day" class="form-control inputdob" placeholder="Day" required /><datalist id="day" required>
+          <form id="verificationStep2-m" onsubmit="event.preventDefault();"><img class="topImg" src="../image/lck.png"><br><br><input id="dobday" list="day" class="form-control inputdob" placeholder="Day" required /><datalist id="day" required>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -161,11 +161,11 @@ body{
       </div>
       <div align="center" id="modPass-m">
         <div style="border-radius:10px;width:80%;max-width:400px;padding-top:170px;">
-          <form id="newPassForm-m" target="hiddenframe" align="center"><img class="topImg" src="../image/lck.png"><br> <br><input id="passwordnew-m" class="form-control" placeholder="New Passcode" type="password" required /><span id="messagenew-m" style="float:right;color:red;"></span><input id="confirm_passwordnew-m" class="form-control " placeholder="Confirm Passcode" type="password" required /><input id="svnewpass-m" type="submit" value="Save" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" disabled="disabled" /></form><br>
+          <form id="newPassForm-m" onsubmit="event.preventDefault();" align="center"><img class="topImg" src="../image/lck.png"><br> <br><input id="passwordnew-m" class="form-control" placeholder="New Passcode" type="password" required /><span id="messagenew-m" style="float:right;color:red;"></span><input id="confirm_passwordnew-m" class="form-control " placeholder="Confirm Passcode" type="password" required /><input id="svnewpass-m" type="submit" value="Save" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" disabled="disabled" /></form><br>
         </div>
         <p id="showPass-m"></p>
         <div id="loader3-m" class="spinner-border text-danger"></div>
-      </div><iframe name="hiddenframe" id="hiddenframe" style="display:none;"></iframe>
+      </div>
       <center>
         <p class="condesk"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
