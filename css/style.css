@@ -1,10 +1,16 @@
 body {
-  background-color: #161616;
+  background-color: #212121 !important;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.39),
+    rgba(27, 27, 27, 0.642)
+  );
+  font-family: "Courier New", Courier, monospace !important;
 }
 html {
   overflow-x: hidden;
@@ -16,12 +22,12 @@ html {
   left: 0px;
   width: 100%;
   position: fixed;
-  background-color: #4b4b4b;
+  background-color: #0000005c;
   padding-bottom: 20px;
 }
 .sticky-m img {
-  width: 100%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 400px;
   max-height: 100px;
 }
 
@@ -32,8 +38,7 @@ html {
   margin-top: 150px;
   background-color: #ffffffd5;
   padding-bottom: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
 }
 #secone button {
   width: 240px;

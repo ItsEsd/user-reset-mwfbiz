@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Primary Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Primary Meta Tags -->
     <title>[ Reset Passcode ] - mwfbiz.COM</title>
-    <meta name="title" content="Reset Pass">
-    <meta name="author" content="Es D">
-    <meta name="description" content="Require Registered Email & Date of Birth."> <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mwfbiz.com/">
-    <meta property="og:title" content="[ Reset Passcode ] - mwfbiz.COM">
-    <meta property="og:description" content="Require Registered Email & Date of Birth.">
-    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@4579e154a126fb6ec08f3dd157c352054349dc24/image/meta/mwfbiz-meta.jpg"> <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mwfbiz.com/">
-    <meta property="twitter:title" content="[ Reset Passcode ] - mwfbiz.COM">
-    <meta property="twitter:description" content="Require Registered Email & Date of Birth.">
-    <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@4579e154a126fb6ec08f3dd157c352054349dc24/image/meta/mwfbiz-meta.jpg">
+    <meta name="title" content="Reset Pass" />
+    <meta name="author" content="Es D" />
+    <meta
+      name="description"
+      content="Require Registered Email & Date of Birth."
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mwfbiz.com/" />
+    <meta property="og:title" content="[ Reset Passcode ] - mwfbiz.COM" />
+    <meta
+      property="og:description"
+      content="Require Registered Email & Date of Birth."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@4579e154a126fb6ec08f3dd157c352054349dc24/image/meta/mwfbiz-meta.jpg"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mwfbiz.com/" />
+    <meta property="twitter:title" content="[ Reset Passcode ] - mwfbiz.COM" />
+    <meta
+      property="twitter:description"
+      content="Require Registered Email & Date of Birth."
+    />
+    <meta
+      property="twitter:image"
+      content="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@4579e154a126fb6ec08f3dd157c352054349dc24/image/meta/mwfbiz-meta.jpg"
+    />
     <!----------------->
-    <link rel="stylesheet" href="../vendor/style/bootstrap.4.5.2.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@18d923c62ba501f852212d4828710d5319de36a8/image/favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="../vendor/style/bootstrap.4.5.2.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/ItsEsd/mwfbiz-com@18d923c62ba501f852212d4828710d5319de36a8/image/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
     <script src="../vendor/scripts/jquery.3.5.1.min.js"></script>
     <script src="../vendor/scripts/popper.1.16.0.min.js"></script>
     <script src="../vendor/scripts/bootstrap.4.5.2.min.js"></script>
@@ -32,7 +57,7 @@
     <script src="../vendor/scripts/jquery-ui.1.11.2.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!--------<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script><script>var loca = moment.tz.guess();var res = loca.split("/", 1);if ( res == "Asia"){ window.location.href = "https://feed.mwfbiz.com";} else{ window.location.href = "https://mwfbiz.com"; } console.log(moment.tz.guess());</script>------>
-   <style>
+    <style>
       /* width */
       ::-webkit-scrollbar {
         width: 0px;
@@ -107,69 +132,229 @@
         font-size: 14px;
       }
 
-      body{
-        background-color: #161616;
-         }
+      body {
+        background-color: transparent;
+      }
     </style>
   </head>
   <body>
     <div>
       <div align="center" id="verStep1">
-        <div style="width:80%;max-width:400px;"><br><br><br>
-          <form id="verificationStep1" onsubmit="event.preventDefault();"><img class="topImg" src="../image/lck.png" autocomplete="off"> <br> <br><input type="email" autocomplete="off" id="mid" class="form-control" placeholder="Enter registered email address** (OBDM)" required /> <input autocomplete="off" type="submit" Value="Next >>" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" id="verClick1"></form>
+        <div style="width: 80%; max-width: 400px">
+          <br /><br /><br />
+          <form id="verificationStep1" onsubmit="event.preventDefault();">
+            <img class="topImg" src="../image/lck.png" autocomplete="off" />
+            <br />
+            <br /><input
+              type="email"
+              autocomplete="off"
+              id="mid"
+              class="form-control"
+              placeholder="Enter registered email address** (OBDM)"
+              required
+            />
+            <input
+              autocomplete="off"
+              type="submit"
+              value="Next >>"
+              style="
+                width: 100%;
+                max-width: 400px;
+                background-color: #dd1d16;
+                color: white;
+                border: none;
+                height: 35px;
+                border-radius: 4px;
+              "
+              id="verClick1"
+            />
+          </form>
         </div>
-        <p id="mcheck" style="color:red;display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:2px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> User email not found</p>
+        <p id="mcheck" style="color: red; display: none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            style="margin-bottom: 2px"
+            fill="currentColor"
+            class="bi bi-exclamation-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+            />
+          </svg>
+          User email not found
+        </p>
         <div id="loader1" class="spinner-border text-danger"></div>
       </div>
       <div align="center" id="verStep2">
-        <div style="width:80%;max-width:400px;"><br><br><br>
-          <form id="verificationStep2" onsubmit="event.preventDefault();" autocomplete="off"><img class="topImg" src="../image/lck.png"><br><br> <span id="rescode" onclick="sendEmail();onClick();" style="font-size:12px;float:right;color: #444;;padding-bottom:4px;cursor: pointer;">Resend Code</span> <input id="vercode" class="form-control" placeholder="Enter Verification Code" required /> <input id="vercodepre" type="text" disabled style="display:none;" /> <input type="submit" id="verClick2" value="Next >>" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" /> </form>
+        <div style="width: 80%; max-width: 400px">
+          <br /><br /><br />
+          <form
+            id="verificationStep2"
+            onsubmit="event.preventDefault();"
+            autocomplete="off"
+          >
+            <img class="topImg" src="../image/lck.png" /><br /><br />
+            <span
+              id="rescode"
+              onclick="sendEmail();onClick();"
+              style="
+                font-size: 12px;
+                float: right;
+                color: #444;
+                padding-bottom: 4px;
+                cursor: pointer;
+              "
+              >Resend Code</span
+            >
+            <input
+              id="vercode"
+              class="form-control"
+              placeholder="Enter Verification Code"
+              required
+            />
+            <input id="vercodepre" type="text" disabled style="display: none" />
+            <input
+              type="submit"
+              id="verClick2"
+              value="Next >>"
+              style="
+                width: 100%;
+                max-width: 400px;
+                background-color: #dd1d16;
+                color: white;
+                border: none;
+                height: 35px;
+                border-radius: 4px;
+              "
+            />
+          </form>
         </div>
-        <p id="vcheck" style="color:red;display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style=" margin-bottom:2px;" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg> Incorrect Verification Code</p>
-        <div id="loader2" class="spinner-border text-danger"></div> <input id="email1" style="display:none;" />
+        <p id="vcheck" style="color: red; display: none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            style="margin-bottom: 2px"
+            fill="currentColor"
+            class="bi bi-exclamation-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+            />
+          </svg>
+          Incorrect Verification Code
+        </p>
+        <div id="loader2" class="spinner-border text-danger"></div>
+        <input id="email1" style="display: none" />
       </div>
       <div align="center" id="modPass">
-        <div style="border-radius:10px;width:80%;max-width:400px;"><br><br>
-          <form id="newPassForm" onsubmit="event.preventDefault();" align="center" autocomplete="off"><img class="topImg" src="../image/lck.png"><br> <br><input id="passwordnew" class="form-control" placeholder="New Passcode" type="password" required /><span id="messagenew" style="float:right;color:red;"></span><input id="confirm_passwordnew" class="form-control " placeholder="Confirm Passcode" type="password" required /><input id="svnewpass" type="submit" value="Save" style="width:100%;max-width:400px;background-color:#dd1d16;color:white;border:none;height:35px;border-radius:4px;" disabled="disabled" /></form><br>
+        <div style="border-radius: 10px; width: 80%; max-width: 400px">
+          <br /><br />
+          <form
+            id="newPassForm"
+            onsubmit="event.preventDefault();"
+            align="center"
+            autocomplete="off"
+          >
+            <img class="topImg" src="../image/lck.png" /><br />
+            <br /><input
+              id="passwordnew"
+              class="form-control"
+              placeholder="New Passcode"
+              type="password"
+              required
+            /><span id="messagenew" style="float: right; color: red"></span
+            ><input
+              id="confirm_passwordnew"
+              class="form-control"
+              placeholder="Confirm Passcode"
+              type="password"
+              required
+            /><input
+              id="svnewpass"
+              type="submit"
+              value="Save"
+              style="
+                width: 100%;
+                max-width: 400px;
+                background-color: #dd1d16;
+                color: white;
+                border: none;
+                height: 35px;
+                border-radius: 4px;
+              "
+              disabled="disabled"
+            />
+          </form>
+          <br />
         </div>
         <p id="showPass"></p>
-        <div id="loader3" class="spinner-border text-danger"></div><br>
+        <div id="loader3" class="spinner-border text-danger"></div>
+        <br />
       </div>
-      <div id="notifyver"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin-bottom:2px;" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" /> </svg> Email Confirmation Code Sent Successfully</div> 
+      <div id="notifyver">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          style="margin-bottom: 2px"
+          fill="currentColor"
+          class="bi bi-envelope-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+          />
+        </svg>
+        Email Confirmation Code Sent Successfully
+      </div>
       <center>
-        <p class="condesk"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-          </svg> <a href="mailto:info@mwfbiz.com">Contact Desk</a> </p>
+        <p class="condesk">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-envelope"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+            />
+          </svg>
+          <a href="mailto:info@mwfbiz.com">Contact Desk</a>
+        </p>
       </center>
       <script>
-        $('#confirm_passwordnew').on('keyup', function() {
-          if ($('#passwordnew').val() == $('#confirm_passwordnew').val()) {
-            $('#messagenew').html('Matching').css('font-size', '12px');
-            document.getElementById('svnewpass').disabled = false;
+        $("#confirm_passwordnew").on("keyup", function () {
+          if ($("#passwordnew").val() == $("#confirm_passwordnew").val()) {
+            $("#messagenew").html("Matching").css("font-size", "12px");
+            document.getElementById("svnewpass").disabled = false;
           } else {
-            $('#messagenew').html('Not Matching').css('font-size', '12px');
-            document.getElementById('svnewpass').disabled = true;
+            $("#messagenew").html("Not Matching").css("font-size", "12px");
+            document.getElementById("svnewpass").disabled = true;
           }
         });
 
         function goBack() {
-          window.open('https://www.mwfbiz.com', '_self');
+          window.open("https://www.mwfbiz.com", "_self");
         }
       </script>
     </div>
     <script src="../reset-pass/pass.js "></script>
     <script>
-      window.addEventListener("online", function() {
+      window.addEventListener("online", function () {
         location.reload();
       });
-      window.addEventListener("offline", function() {
+      window.addEventListener("offline", function () {
         document.body.style.background = "black";
         document.body.style.fontFamily = "Arial";
         document.body.style.height = "100%";
-        document.body.innerHTML = "<div align='center' style='padding:10px;'><div style='border-radius:10px;max-width:400px;margin-top:120px;border:none;box-shadow:0 2px 6px 0 grey;padding:40px;color:white;'><p style='font-size:40px'>&#9785;</p><h2 style='padding:20px;'>No Internet</h2></div><div align='center'><h3 style='color:white;padding-top:80px;'>Mind Without Fear | M W F</h3></div></div>";
+        document.body.innerHTML =
+          "<div align='center' style='padding:10px;'><div style='border-radius:10px;max-width:400px;margin-top:120px;border:none;box-shadow:0 2px 6px 0 grey;padding:40px;color:white;'><p style='font-size:40px'>&#9785;</p><h2 style='padding:20px;'>No Internet</h2></div><div align='center'><h3 style='color:white;padding-top:80px;'>Mind Without Fear | M W F</h3></div></div>";
       });
-    </script></body>
+    </script>
+  </body>
 </html>
