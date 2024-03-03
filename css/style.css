@@ -23,14 +23,22 @@ html {
   width: 100%;
   position: fixed;
   background-color: #0000005c;
-  padding-bottom: 20px;
+  padding-left: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ffffffbe;
 }
 .sticky-m img {
   width: 80%;
-  max-width: 400px;
+  max-width: 350px;
   max-height: 100px;
 }
-
+.usrnt {
+  float: right;
+  color: #e5e5e5;
+  margin-right: 10px;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
 #secone {
   width: 100%;
   margin: 5px;
@@ -48,12 +56,14 @@ html {
 }
 #secone-head {
   text-align: left;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
   padding-left: 10px;
   background-color: #b10505;
   color: white;
   margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 footer {
   margin-top: 60px;
