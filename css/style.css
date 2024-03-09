@@ -40,8 +40,7 @@ html {
   padding-bottom: 5px;
 }
 #secone {
-  width: 100%;
-  margin: 5px;
+  width: 95%;
   max-width: 400px;
   margin-top: 150px;
   background-color: #ffffffd5;
@@ -141,4 +140,13 @@ footer a {
 #footer a:hover {
   text-decoration: none;
   color: #dddddd;
+}
+@media screen and (max-width: 400px) {
+  #keysw {
+    display: none;
+  }
+  .usrnt {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
