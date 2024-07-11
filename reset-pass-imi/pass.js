@@ -1,18 +1,15 @@
-document.getElementById("verClick1-m").addEventListener("click", verifyEmailM);
-var usrc_ =
-  "https://script.google.com/macros/s/AKfycbww8VNxIZvI3e1Xs3uX5bHjFkBnTsfC07-s_OZ579HPNbecLTHKUzRxITVBuGSL2Khg" +
-  "/exec";
+document.getElementById("verClick1-m").addEventListener("click", verifyMNuser);
+const usrc_ =
+  "https://script.google.com/macros/s/AKfycbxkV2PFSfBVPp5Hfwdgpx8M5yUZvF4mBRc7Bz_V4c_P-hTjA-X5oBNR_i-35Pe5UzkJ/exec";
 document.getElementById("svnewpass-m").addEventListener("click", updatepassM);
 
 function updatepassM() {
   document.getElementById("loader3-m").style.visibility = "visible";
-  var script_pass =
-    "https://script.google.com/macros/s/AKfycbxLuHw6CPKhGb7Fjm-CxEMIRybUn-Tt3y89GB90W6j_gO0Pg7zC3ySQX-FkbspoG6eldg/exec";
   var newP = $("#passwordnew-m").val();
-  var emid = $("#email1-m").val();
+  var emid = $("#mid-m").val();
   if (emid != "info@mwfbiz.com" && newP != 0) {
     var urlp =
-      script_pass +
+      usrc_ +
       "?callback=bzmnlgudtd&email1=" +
       emid +
       "&passwordnew=" +
@@ -34,65 +31,52 @@ function updatepassM() {
 function bzmnlgudtd(e) {
   if (e.result == "Value updated successfully!") {
     document.getElementById("loader3-m").style.visibility = "hidden";
+    document.getElementById("newPassForm-m").style.display = "none";
     document.getElementById("showPass-m").innerHTML =
-      '<div><h4 style="color:red;font-size:16px;"><p style="color:#008000;">&#9745; You have changed your pass successfully</p></div>';
+      '<div style="margin-top:10vh;"><h3 style="color:#e1e1e1;">&#9745; You have changed your pass successfully</h3></div>';
     setTimeout(function () {
       $("#showPass-m").fadeOut("fast");
       location.reload();
     }, 5000);
   }
 }
-function verifyEmailM() {
+
+function verifyMNuser() {
   var ml = $("#mid-m").val();
+  var da = $("#dobday").val();
+  var mo = $("#dobmonth").val();
+  var ye = $("#dobyear").val();
+  var dob = da + "-" + mo + "-" + ye;
   if (ml != 0) {
     document.getElementById("loader1-m").style.visibility = "visible";
     document.getElementById("mcheck-m").style.display = "none";
-    var url = usrc_ + "?action=versign";
-    $.getJSON(url, function (json) {
-      for (var i = 0; i < json.records.length - 1; i++) {
-        if (ml == json.records[i].Email) {
-          document.getElementById("verStep1-m").style.display = "none";
-          document.getElementById("verStep2-m").style.display = "block";
-          document.getElementById("email1-m").value = ml;
-          document.getElementById("loader1-m").style.visibility = "hidden";
-        } else {
-          document.getElementById("mcheck-m").style.display = "block";
-          document.getElementById("loader1-m").style.visibility = "hidden";
-        }
-      }
+    var url =
+      usrc_ +
+      "?callback=ctrlqmnuser&eid=" +
+      ml +
+      "&dob=" +
+      dob +
+      "&action=vermnuser";
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url,
+      method: "GET",
+      dataType: "jsonp",
     });
   } else {
     return false;
   }
 }
-document.getElementById("verClick2-m").addEventListener("click", verifybirthM);
-function verifybirthM() {
-  var ml = $("#mid-m").val();
-  var da = $("#dobday").val();
-  var mo = $("#dobmonth").val();
-  var ye = $("#dobyear").val();
-  if (da != 0 && mo != 0 && ye != 0) {
-    document.getElementById("loader2-m").style.visibility = "visible";
-    document.getElementById("birthcheck").style.display = "none";
-    var url = usrc_ + "?action=versign";
-    $.getJSON(url, function (json) {
-      for (var i = 0; i < json.records.length - 1; i++) {
-        if (
-          ml == json.records[i].Email &&
-          da == json.records[i].DOBDate &&
-          mo == json.records[i].DOBMonth &&
-          ye == json.records[i].DOBYear
-        ) {
-          document.getElementById("verStep2-m").style.display = "none";
-          document.getElementById("modPass-m").style.display = "block";
-          document.getElementById("loader2-m").style.visibility = "hidden";
-        } else {
-          document.getElementById("birthcheck").style.display = "block";
-          document.getElementById("loader2-m").style.visibility = "hidden";
-        }
-      }
-    });
-  } else {
-    return false;
+
+function ctrlqmnuser(e) {
+  var res = e.result;
+  if (res === "Valid") {
+    document.getElementById("verStep1-m").style.display = "none";
+    document.getElementById("modPass-m").style.display = "block";
+    document.getElementById("loader1-m").style.visibility = "hidden";
+  } else if (res === "ID not found!") {
+    document.getElementById("mcheck-m").style.display = "block";
+    document.getElementById("loader1-m").style.visibility = "hidden";
   }
 }
