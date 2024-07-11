@@ -10,9 +10,9 @@ $("#btnmono").click(function () {
   $("#secone").hide();
   elem.style.display = "none";
 });
-// const loca = window.location.hostname;
-// if (loca.endsWith("mwfbiz.com")) {
-//   document.body.style.display = "block";
-// } else {
-//   document.body.innerHTML = "";
-// }
+const loca = window.location.hostname;
+if (loca.endsWith("mwfbiz.com")) {
+  document.body.style.display = "block";
+} else {
+  document.body.innerHTML = "";
+}
