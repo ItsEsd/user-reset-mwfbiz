@@ -35,9 +35,10 @@ html {
 .usrnt {
   float: right;
   color: #e5e5e5;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 14px;
   padding-bottom: 5px;
+  margin-top: 5px;
 }
 #secone {
   width: 95%;
@@ -148,5 +149,18 @@ footer a {
   .usrnt {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mnlogonv {
+    width: 30px !important;
+  }
+  #titleImg,
+  .titleImg {
+    max-width: 285px !important;
+  }
+  .qb {
+    font-size: 12px !important;
+    line-height: 26px !important;
   }
 }
