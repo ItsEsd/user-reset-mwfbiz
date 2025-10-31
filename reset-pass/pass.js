@@ -85,7 +85,7 @@ function bzpupdtd(e) {
     document.getElementById("loader3").style.visibility = "hidden";
     document.getElementById("newPassForm").style.display = "none";
     document.getElementById("showPass").innerHTML =
-      '<div style="margin-top:10vh;"><h3 style="color:#e1e1e1;">&#9745;  Passcode Changed</h3></div>';
+      '<div style="margin-top:15vh;"><h3 style="color:#e1e1e1;">&#9745;  Passcode Changed</h3></div>';
     setTimeout(function () {
       $("#showPass").fadeOut("fast");
       window.open("https://mwfbiz.com", "_self");

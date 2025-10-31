@@ -15,5 +15,5 @@ if (loca.endsWith("mwfbiz.com")) {
   document.body.style.display = "block";
 } else {
   document.body.innerHTML =
-    "<center style='display:flex;align-items:center;justify-content:center;height:100vh;color:white;'><div style='width:90%;'><h2>🙁<br>Authentication Error!</div></h2><center>";
+    "<center style='display:flex;align-items:center;justify-content:center;height:100vh;color:white;'><div style='width:90%;'><h2>401<br>Authentication Error!</div></h2><center>";
 }
