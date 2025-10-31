@@ -1,12 +1,12 @@
 body {
   background-color: #212121 !important;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
   overscroll-behavior-x: none;
   overscroll-behavior-y: none;
   background: linear-gradient(
-    to right,
+    -180deg,
     rgba(255, 0, 0, 0.39),
     rgba(27, 27, 27, 0.642)
   );
@@ -43,7 +43,7 @@ html {
 #secone {
   width: 95%;
   max-width: 400px;
-  margin-top: 150px;
+  margin-top: 25vh;
   background-color: #ffffffd5;
   padding-bottom: 20px;
   border-radius: 10px;

@@ -14,5 +14,6 @@ const loca = window.location.hostname;
 if (loca.endsWith("mwfbiz.com")) {
   document.body.style.display = "block";
 } else {
-  document.body.innerHTML = "";
+  document.body.innerHTML =
+    "<center style='display:flex;align-items:center;justify-content:center;height:100vh;color:white;font-size:3rem;'>🙁<br>Authentication Error!<center>";
 }
